@@ -3,9 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href ="css/styles.css" rel="stylesheet">
+    <title>Learn Data Structures and Algorithms</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <h1>Learn DS&A</h1>
+            <ul class = "nav-menu">
+                <li><a href ="index.html" class = "current-page">Home</a></li>
+                <li><a href ="datastructures.html">Data Structures</a></li>
+                <li><a href ="algorithms.html">Algorithms</a></li>
+                <li><a href ="applications.html">Applications</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class = "intro">
+            <h2>A Brief Introduction to Data Structures and Algorithms</h2>
+            <img src = "img/dsa_intro.png" alt= "program equals data structure plus algorithm">
+        </section>
+
+        <section class = "information">
+            <article>
+            <h3>What Are Data Structures and Algorithms?</h3>
+            <p>A data structure is a special way to store and organize data. 
+                There are many different data structures depending on the data involved and how one may want to manipulate it.</p>
+            <p>An algorithm is a set of instructions that solve a specific problem. 
+                You take a set of inputs, process it with your algorithm, and produce the desired output.</p>
+             </article>
+
+             <article>
+                <h3>Why Study Data Structures and Algorithms?</h3>
+                <p> Data structures and algorithms are essential to any computer science curriculum. 
+                    Using the right data structure and algorithm can allow you to solve a wide variety of problems that software engineers face. 
+                    Aside from simply solving a problem, you can use tools to analyze how fast an algorithm runs. 
+                    This has a dramatic impact when it comes to solving problems that may involve enormous data sets or many users.
+                    A faster time complexity can be the difference between your program taking a few seconds versus several days! </p>
+             </article>
+
+             <article>
+                <h3>What is Time Complexity?</h3>
+                <p> Before going any further it's helpful to know about time complexity. It is a way to measure how fast
+                    an algorithm runs as the size of the input increases. We use big O notation to consider worst case time complexity. 
+                    We use big O notation like O(n) or O(n^2). If an algorithm has time complexity O(n^2), then it means the number of steps it takes is proportional to n^2. 
+                    Let's say an algorithm processes 10 numbers and has O(n) runtime. Then it could take 10 steps to process 10 numbers in the worst case. If the algorithm were slower and ran at O(n^2), then the algorithm 
+                    could roughly take 10^2 steps to process the same amount of input. These numbers aren't precise but are intended to give an intution for time complexity. We can see that this becomes very important as n becomes large.
+                </p>
+             </article>
+
+        </section>
+
+    </main>
+    <footer>
+        <img src = "img/csumb_logo_small.jpg" alt = "csumb logo">
+        <p>CST336 Internet Programming. 2025&copy; Larson <br>
+    </footer>
 </body>
 </html>

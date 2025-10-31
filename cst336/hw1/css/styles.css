@@ -1,0 +1,98 @@
+header {
+    background-color: #31456b;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+nav h1 {
+    margin-left: 20px;
+    font-size: 2.5em;
+}
+
+.nav-menu {
+    display:flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    display:flex;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 16px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+a:visited{
+    color: white;
+}
+
+a:link {
+    color: white;
+}
+
+
+.nav-menu a:hover {
+    background-color: #b6cad4;
+    color: black;
+}
+
+.nav-menu a.current-page {
+    background-color: #6b92b6;
+    color: white;
+}
+
+.intro {
+    text-align: center;
+    background-color: rgb(232, 243, 247);
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+.intro h2 {
+    padding-top: 20px;
+    font-size: 2.2em;
+}
+
+.intro img {
+    border-radius: 50px;
+    width: 560px;
+    height: 315px;
+}
+
+.information {
+    max-width: 1200px;
+    background-color: rgb(232, 243, 247);
+    margin: 0 auto;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.information h3 {
+    font-size: 1.6em;
+}
+
+.information p {
+    font-size: 1.4em;
+    line-height: 1.5;
+}
+
+
+footer {
+    text-align: center;
+    font-size: .9em;
+}
