@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href ="css/styles.css" rel="stylesheet">
     <title>Learn Data Structures and Algorithms</title>
 </head>
@@ -25,16 +28,75 @@
         </section>
 
         <section class = "information">
-            <h2>Arrays</h2>
-            <img src = "img/array.png" alt = "array">
-            <p>Description:</p>
+            <article>
+                <h3>Array</h3>
+                <p>Description: An array is a sequence of n items of the same data type that are stored
+                    contiguously in computer memory and made accessible by specifying the array's index value.
+                </p>
+                <img src = "img/array.png" alt = "array">
+                <table>
+                    <tr class = "table-header">
+                        <td><strong>Operation</strong></td>
+                        <td><strong>Time Complexity</strong></td>
+                    </tr>
+                    <tr class = "table-row">
+                        <td>Access</td>
+                        <td>O(1)</td>
+                    </tr>
+                    <tr class = "table-row">
+                        <td>Search</td>
+                        <td>O(n) or O(log(n)) if sorted</td>
+                    </tr>
+                    <tr class = "table-row">
+                        <td>Insert</td>
+                        <td>O(n)</td>
+                    </tr>
+                    <tr class = "table-row">
+                        <td>Delete</td>
+                        <td>O(n)</td>
+                    </tr>
+                </table>
+            </article>
 
             <article>
                 <h3>Linked List</h3>
+                    <p>Description: A linked list is a sequence of zero or more elements called nodes,
+                        each containing two kinds of information: some data and one or more links called pointers 
+                        to other nodes of the linked list. This does not have to be stored contiguously in memory. In a singly linked list, each node contains a single
+                        pointer to the next element except the last one which is a null pointer.
+                </p>
+                <img src = "img/linkedlist.png" alt = "Linked List">
+                <table>
+                    <tr class = "table-header">
+                        <td><strong>Operation</strong></td>
+                        <td><strong>Time Complexity</strong></td>
+                    </tr>
+                    <tr class = "table-row">
+                        <td>Access</td>
+                        <td>O(n)</td>
+                    </tr>
+                    <tr class = "table-row">
+                        <td>Search</td>
+                        <td>O(n)</td>
+                    </tr>
+                    <tr class = "table-row">
+                        <td>Insert</td>
+                        <td>O(1)</td>
+                    </tr>
+                    <tr class = "table-row">
+                        <td>Delete</td>
+                        <td>O(1)</td>
+                    </tr>
+                </table>
             </article>
 
             <article>
                 <h3>Graph</h3>
+                <p>Description: A graph is formally defined as a pair of two sets, a set V of vertices and a set E of pairs of edges between the vertices.
+                    If the set of edges is unordered, it's an undirected graph. If order matters, it's a directed graph. In a weighted graph the edges have a
+                     weight or value associated with them. Graphs are represented either by an adjacency matrix or adjacency list.
+                </p>
+                <img src = "img/graph.png" alt = "Graph">
             </article>
 
 
@@ -43,6 +105,7 @@
 
 
     </main>
+    <hr>
     <footer>
         <img src = "img/csumb_logo_small.jpg" alt = "csumb logo">
         <p>CST336 Internet Programming. 2025&copy; Larson <br>

@@ -1,3 +1,14 @@
+body {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+
 header {
     background-color: #31456b;
 }
@@ -88,7 +99,21 @@ a:link {
 
 .information p {
     font-size: 1.4em;
-    line-height: 1.5;
+    line-height: 1.6;
+}
+
+.information img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.information table {
+    margin-bottom: 20px;
+}
+
+article {
+    margin: 50px 0;
 }
 
 
@@ -96,3 +121,28 @@ footer {
     text-align: center;
     font-size: .9em;
 }
+
+table {
+    margin: 0px auto;
+}
+
+td {
+    padding: 0 10px;
+    font-size: 1.3em;
+    border: black solid;
+}
+
+td strong {
+    color: white;
+}
+
+.table-header {
+    background-color: #2326d8;
+}
+
+.table-row{
+    background-color: #3b92f5;
+    color: rgb(0, 0, 0);
+}
+
+

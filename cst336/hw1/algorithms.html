@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href ="css/styles.css" rel="stylesheet">
     <title>Learn Data Structures and Algorithms</title>
 </head>
@@ -26,6 +29,31 @@
         </section>
 
         <section class = "information">
+            <article>
+                <h3>Binary Search</h3>
+                <p>A binary search is an extremely efficient way to search for an element in a sorted array. It works by
+                    comparing the search target K with the middle element of the array. If it matches, we stop. If it doesn't,
+                     then we make a comparison and check if the key is in the larger half of the array or the smaller half. If K is larger,
+                      then we can simply discard the first half of the original array and then take the middle of the second half and repeat the process. If K is smaller, 
+                      then we consider the first half. This allows us to divide the problem in half during each iteration, achieving a time complexity of log(n).
+                </p>
+            </article>
+
+            <article>
+                <h3>Bubble Sort</h3>
+                <p>This is a brute force sorting algorithm. It works by comparing adjacent elements in an array and swapping them if they are out of order. We
+                    do it repeatedly so that the largest element "bubbles up" to the last position in the array. The next pass bubbles up the 2nd
+                     largest element and so on. During each pass we consider a smaller unsorted portion. After n-1 passes it is sorted. It has a time complexity of O(n^2).
+                </p>
+            </article>
+
+            <article>
+                <h3>Depth-First Search</h3>
+                <p>DFS is a graph traversal algorithm. You traverse the nodes of the graph in a way where you go as deeply as possible. Start at one vertex, check its neighbors,
+                    check the neighbors of the neighbors, and go as deeply as possible. Then backtrack after hitting a dead-end and explore a new path. This has a time complexity
+                     of O(V + E) where V is number of vertices and E is number of edges.
+                </p>
+            </article>
             
 
         </section>
@@ -33,7 +61,7 @@
 
 
     </main>
-
+    <hr>
     <footer>
         <img src = "img/csumb_logo_small.jpg" alt = "csumb logo">
         <p>CST336 Internet Programming. 2025&copy; Larson <br>
