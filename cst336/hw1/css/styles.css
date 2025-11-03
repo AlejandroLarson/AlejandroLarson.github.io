@@ -47,14 +47,13 @@ nav h1 {
     display: flex;
 }
 
-a:visited{
+.nav-menu a:visited{
     color: white;
 }
 
-a:link {
+.nav-menu a:link {
     color: white;
 }
-
 
 .nav-menu a:hover {
     background-color: #b6cad4;
