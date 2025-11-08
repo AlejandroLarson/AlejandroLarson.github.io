@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(/cst336/lab2/img/slots.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header {
+    background-color: #FF2A2A;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 15px;
+    border: solid 2px #000000;
+    
+}
+
+header h1 {
+    font-size: 4em;
+}
+
+header h2 {
+    font-size: 3em;
+}
+
+header h1,h2{
+    font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+#main {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+    background: linear-gradient(to bottom, #02014e, #000000);
+    text-align: center;
+    font-size: 2em;
+    color: white;
+
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+}
+
+#main * {
+    margin: 15px 0;
+}
+
+input#playerGuess {
+    margin-right: 10px;
+    padding: 5px;
+    font-size: 1em;
+}
+
+button {
+ background-color: #0dc3ff;
+ border: none;
+ border-radius: 10%;
+ box-shadow: 0 0 15px #00BFFF;
+ font-size: 1.2em;
+ padding: 5px;
+ text-align: center;
+}
+
+#guessBtn { 
+    margin-left: 15px;
+}
+
+button:hover {
+    background-color: magenta;
+    cursor: pointer;
+    box-shadow: 0 0 15px magenta;
+    font-size: 1.3em;
+    transition: .5s;
+}
+
+#resetBtn {
+    background-color: rgb(238, 154, 29);
+}
+
+#resetBtn:hover {
+    background-color: rgb(255, 223, 116);
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+    
+}
