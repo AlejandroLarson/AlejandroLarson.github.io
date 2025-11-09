@@ -6,6 +6,7 @@ var score = 0;
 var attempts = localStorage.getItem("total_attempts");
 
 displayQ4Choices();
+display4FlagChoices();
 
 //Functions
 
@@ -17,8 +18,18 @@ function displayQ4Choices() {
             `<input type="radio" name="q4" id="${q4ChoicesArray[i]}" 
             value="${q4ChoicesArray[i]}"> <label for="${q4ChoicesArray[i]}"> ${q4ChoicesArray[i]}</label>`;
     }
-}
-//displayQ4Choices
+} //displayQ4Choices
+
+function display4FlagChoices() {
+    let q10ChoicesArray = ["Arizona", "New Mexico", "Texas", "Tennessee"];
+    q10ChoicesArray = _.shuffle(q10ChoicesArray);
+    for(let i = 0; i < q10ChoicesArray.length;i++) {
+        document.querySelector("#q10Choices").innerHTML +=
+        `<input type = "radio" name="q10" id = "${q10ChoicesArray[i]}"
+        value="${q10ChoicesArray[i]}"> <label for="${q10ChoicesArray[i]}"> <img src = "img/${q10ChoicesArray[i]}.png" alt = "${q10ChoicesArray[i]} state flag"
+        style="width:150px;" > </label>`;
+    }
+} //display4FlagChoices
 
 function isFormValid() {
     let isValid = true;
@@ -33,7 +44,7 @@ function rightAnswer(index) {
     document.querySelector(`#q${index}Feedback`).innerHTML = "Correct!";
     document.querySelector(`#q${index}Feedback`).className = "bg-success text-white";
     document.querySelector(`#markImg${index}`).innerHTML = "<img src='img/checkmark.png'>";
-    score += 20;
+    score += 10;
 }
 
 function wrongAnswer(index) {
@@ -56,6 +67,11 @@ function gradeQuiz() {
     let q2Response = document.querySelector("#q2").value;
     console.log(q2Response);
     let q4Response = document.querySelector("input[name=q4]:checked").value;
+    let q5Response = document.querySelector("input[name=q5]:checked").value;
+    let q6Response = document.querySelector("#statesCount").value;
+    let q7Response = document.querySelector("#q7").value.toLowerCase();
+    let q9Response = document.querySelector("#q9").value;
+    let q10Response = document.querySelector("input[name=q10]:checked").value;
 
     //Grading question 1
     if (q1Response == "sacramento") {
@@ -89,6 +105,52 @@ function gradeQuiz() {
         wrongAnswer(4);
     }
 
+    //Grading question 5
+    if (q5Response == "True") {
+        rightAnswer(5);
+    } else {
+        wrongAnswer(5);
+    }
+
+    //Grading question 6
+    if (q6Response == 50) {
+        rightAnswer(6);
+    } else {
+        wrongAnswer(6);
+    }
+
+    //Grading question 7
+    if (q7Response == "lake superior") {
+        rightAnswer(7);
+    } else {
+        wrongAnswer(7);
+    }
+
+    //Grading Question 8
+    if (document.querySelector("#Massachusetts").checked && document.querySelector("#Vermont").checked
+    && !document.querySelector("#NewYork").checked && !document.querySelector("#Pennsylvania").checked) {
+        rightAnswer(8);
+    } else {
+        wrongAnswer(8);
+    }
+
+    //Grading Question 9
+    if(q9Response == "NewJersey"){
+        rightAnswer(9);
+    } else {
+        wrongAnswer(9);
+    }
+
+    //Grading Question 10
+    if(q10Response == "Arizona"){
+        rightAnswer(10);
+    } else {
+        wrongAnswer(10);
+    }
+
+
+
+
     
     totalScore = document.querySelector("#totalScore");
     totalScore.textContent = `Total Score: ${score}`;
@@ -96,9 +158,10 @@ function gradeQuiz() {
     //score should be red if under 80, green otherwise
     if (score < 80) {
         totalScore.className = "text-danger";
+        document.querySelector("#successMessage").textContent = "";
     } else {
         totalScore.className = "text-success";
-        document.querySelector("#successMessage").textContent = 'Congratulations on a score above 80!'
+        document.querySelector("#successMessage").textContent = 'Congratulations on a score equal or greater than 80!';
     }
 
     document.querySelector("#totalAttempts").innerHTML = `Total Attempts: ${++attempts}`;
