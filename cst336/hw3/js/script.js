@@ -40,7 +40,7 @@ function validateForm(city){
 
 // fetch weather data
 async function getWeather(city){
-    let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}&units=imperial`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${API_KEY}&units=imperial`;
     
     try {
     let response = await fetch(url);
