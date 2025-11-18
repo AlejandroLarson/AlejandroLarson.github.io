@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Weather App</title>
+    
+</head>
+
+<body>
+    <div class="all-container">
+        <h1>Weather App</h1>
+        <div class="search-container">
+            <form id="weather-form">
+                <input type="text" id="city-input" name="searchbar" placeholder="Enter city">
+                <button type="submit">Submit</button>
+
+            </form>
+            <div id="searchError"></div>
+
+        </div>
+
+        <div class="weather-data-container">
+            <h2 id="city-name"></h2>
+            <div id="icon-container"></div>
+            <h4 id="current-temperature"></h4>
+            <h5 id="description"></h5>
+            <p class="tempspan high"></p>
+            <p class="tempspan low"></p>
+            <p id="humidity"></p>
+
+
+        </div>
+
+    </div>
+    <footer>
+        <img src="img/csumb_logo_small.jpg" alt="csumb logo">
+        <div>CST336 Internet Programming. 2025&copy; Larson</div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
